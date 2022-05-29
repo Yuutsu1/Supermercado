@@ -6,7 +6,7 @@ public class Administrador {
 
     public Administrador(String usuario, String clave) {
         this.usuario = usuario;
-        this.clave = clave;
+        this.clave = clave; //Comentario Prueba
     }
 
     public String getUsuario() {
