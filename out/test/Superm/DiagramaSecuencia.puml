@@ -1,0 +1,32 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+hide footbox
+title Realizar Pedido
+
+actor ":Administrador" as admin
+participant ":Ventana" as ventana
+'participant ":PanelProveedor" as pProovedor
+'participant ":PanelProducto" as pProducto
+'participant ":Producto" as producto
+participant ":PanelPedido" as pPedido
+
+admin --> ventana: Inicia sistema
+activate ventana
+activate admin
+ventana -> admin: iniciarSesion()
+deactivate ventana
+deactivate admin
+
+admin --> pPedido: Seleccionar realizar pedido
+activate pPedido
+activate admin
+pPedido -> admin: mostrarFormulario()
+admin --> pPedido: Ingresar productos(productos)
+pPedido -> admin: mostrarProductos(productos)
+admin --> pPedido: Confirmar pedido
+pPedido -> admin: registrarPedido()
+
+
+@enduml
